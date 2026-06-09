@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandelions | Teman Cerita & Jasa Curhat Rahasia</title>
+    
+    <!-- Google Fonts: Nunito for a friendly, soft, and approachable look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        // Warm, soothing palette (peach, soft clay, sage)
+                        peach: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bba3',
+                            500: '#d97757', // brand main
+                            600: '#c25e3e',
+                            900: '#4a261d',
+                        },
+                        sage: {
+                            100: '#e8ecea',
+                            500: '#8ba39e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for hidden elements and animations */
+        .modal-hidden { opacity: 0; pointer-events: none; transition: all 0.3s ease; transform: scale(0.95); }
+        .modal-visible { opacity: 1; pointer-events: auto; transition: all 0.3s ease; transform: scale(1); }
+    </style>
+</head>
+<body class="bg-peach-50 text-peach-900 antialiased selection:bg-peach-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-40 bg-peach-50/90 backdrop-blur-md border-b border-peach-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-ear text-3xl text-peach-500"></i>
+                    <span class="font-bold text-xl tracking-tight">Dan<span class="text-peach-500">delions</span></span>
+                </div>
+                <div>
+                    <a href="#paket" class="text-sm font-semibold text-peach-600 hover:text-peach-900 transition">Lihat Paket</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peach-100 text-peach-600 text-sm font-semibold mb-6">
+            <i class="ph-fill ph-sparkle"></i> Promo: 10 Menit Pertama GRATIS!
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+            Berat ya hari ini? <br>
+            <span class="text-peach-500">Sini cerita, aku dengerin.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-peach-900/70 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Tempat aman untuk meluapkan isi hati, menangis, atau sekadar <i>sambat</i> tanpa takut dihakimi. 100% Rahasia & Anonim.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#paket" class="bg-peach-500 hover:bg-peach-600 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-peach-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                <i class="ph ph-coffee"></i> Mulai Cerita Sekarang
+            </a>
+            <a href="#cara-kerja" class="bg-white hover:bg-peach-100 text-peach-900 border border-peach-200 font-bold py-3 px-8 rounded-full transition flex items-center justify-center gap-2">
+                Cara Kerjanya
+            </a>
+        </div>
+    </section>
+
+    <!-- Features / Value Prop -->
+    <section class="py-12 bg-white border-y border-peach-100" id="cara-kerja">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-4">
+                    <div class="w-16 h-16 mx-auto bg-peach-100 text-peach-500 rounded-2xl flex items-center justify-center text-3xl mb-4 rotate-3">
+                        <i class="ph-fill ph-shield-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">100% Rahasia</h3>
+                    <p class="text-sm text-peach-900/70">Boleh pakai nama samaran. Chat langsung dihapus setelah sesi selesai jika diminta.</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-16 h-16 mx-auto bg-sage-100 text-sage-500 rounded-2xl flex items-center justify-center text-3xl mb-4 -rotate-3">
+                        <i class="ph-fill ph-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tanpa Penghakiman</h3>
+                    <p class="text-sm text-peach-900/70">Tidak ada ceramah "Ah, mending kamu...". Kami murni mendengarkan dan memvalidasi perasaanmu.</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-4 rotate-3">
+                        <i class="ph-fill ph-gift"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Virtual Care Package</h3>
+                    <p class="text-sm text-peach-900/70">Dapatkan rekomendasi playlist penenang atau afirmasi positif gratis setelah sesi selesai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Menu Paket -->
+    <section id="paket" class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold mb-3">Pilih "Menu" Curhatmu</h2>
+            <p class="text-peach-900/70">Sesuaikan dengan apa yang sedang kamu butuhkan saat ini.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Paket 1 -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl shadow-peach-100 border border-peach-100 hover:border-peach-300 transition relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-peach-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Terfavorit</div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-indigo-50 text-indigo-500 rounded-lg text-2xl"><i class="ph-fill ph-moon-stars"></i></div>
+                    <h3 class="font-bold text-xl">Overthinking Tengah Malam</h3>
+                </div>
+                <p class="text-sm text-peach-900/70 mb-4 min-h-[60px]">Jam 10 malam - 2 pagi. Ditemani chat/call saat isi kepala sedang berisik dan susah tidur.</p>
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-2xl font-black">Rp 20k</span><span class="text-sm text-peach-900/50"> / jam</span>
+                    </div>
+                </div>
+                <button onclick="openBooking('Overthinking Tengah Malam')" class="w-full bg-peach-100 hover:bg-peach-200 text-peach-900 font-bold py-2 rounded-xl transition">Pilih Paket</button>
+            </div>
+
+            <!-- Paket 2 -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl shadow-peach-100 border border-peach-100 hover:border-peach-300 transition group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-rose-50 text-rose-500 rounded-lg text-2xl"><i class="ph-fill ph-heart-break"></i></div>
+                    <h3 class="font-bold text-xl">Patah Hati & Gagal Move On</h3>
+                </div>
+                <p class="text-sm text-peach-900/70 mb-4 min-h-[60px]">Luapkan emosimu tanpa disela. Boleh menangis sepuasnya via telepon. Aku temani sampai lega.</p>
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-2xl font-black">Rp 20k</span><span class="text-sm text-peach-900/50"> / jam</span>
+                    </div>
+                </div>
+                <button onclick="openBooking('Patah Hati & Gagal Move On')" class="w-full bg-peach-100 hover:bg-peach-200 text-peach-900 font-bold py-2 rounded-xl transition">Pilih Paket</button>
+            </div>
+
+            <!-- Paket 3 -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl shadow-peach-100 border border-peach-100 hover:border-peach-300 transition group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-sage-100 text-sage-500 rounded-lg text-2xl"><i class="ph-fill ph-chat-circle-text"></i></div>
+                    <h3 class="font-bold text-xl">Cuma Mau Didengerin</h3>
+                </div>
+                <p class="text-sm text-peach-900/70 mb-4 min-h-[60px]">Tanpa saran, tanpa nasihat. Aku hanya mendengarkan dan merespons dengan afirmasi positif.</p>
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-2xl font-black">Rp 20k</span><span class="text-sm text-peach-900/50"> / jam</span>
+                    </div>
+                </div>
+                <button onclick="openBooking('Cuma Mau Didengerin')" class="w-full bg-peach-100 hover:bg-peach-200 text-peach-900 font-bold py-2 rounded-xl transition">Pilih Paket</button>
+            </div>
+
+            <!-- Paket 4 -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl shadow-peach-100 border border-peach-100 hover:border-peach-300 transition group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-amber-50 text-amber-500 rounded-lg text-2xl"><i class="ph-fill ph-lightbulb"></i></div>
+                    <h3 class="font-bold text-xl">Butuh Solusi Otak Kanan</h3>
+                </div>
+                <p class="text-sm text-peach-900/70 mb-4 min-h-[60px]">Sesi interaktif. Selain mendengar, aku bantu berikan sudut pandang objektif dan saran ringan.</p>
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-2xl font-black">Rp 20k</span><span class="text-sm text-peach-900/50"> / jam</span>
+                    </div>
+                </div>
+                <button onclick="openBooking('Butuh Solusi Otak Kanan')" class="w-full bg-peach-100 hover:bg-peach-200 text-peach-900 font-bold py-2 rounded-xl transition">Pilih Paket</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-peach-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-8">Apa Kata Mereka?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="bg-peach-600/50 p-6 rounded-2xl backdrop-blur-sm">
+                    <div class="flex text-yellow-300 mb-2"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="italic text-peach-50">"Makasih kak, aku udah lega banget sekarang bisa tidur nyenyak. Seneng banget nemu tempat cerita yang gak nge-judge sama sekali."</p>
+                    <p class="mt-4 font-bold text-sm text-peach-200">- Anonim, Paket Overthinking</p>
+                </div>
+                <div class="bg-peach-600/50 p-6 rounded-2xl backdrop-blur-sm">
+                    <div class="flex text-yellow-300 mb-2"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="italic text-peach-50">"Sempet takut privasi bocor, tapi ternyata beneran aman. Chat langsung dihapus pas aku minta. Next time pasti curhat sini lagi."</p>
+                    <p class="mt-4 font-bold text-sm text-peach-200">- Inisial 'D', Paket Cuma Didengerin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Disclaimer -->
+    <footer class="bg-peach-900 text-peach-200 py-12 px-4 sm:px-6 lg:px-8 text-center sm:text-left border-t-4 border-peach-500">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div class="max-w-sm">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-4 text-white">
+                    <i class="ph-fill ph-ear text-3xl"></i>
+                    <span class="font-bold text-xl">Dandelions</span>
+                </div>
+                <p class="text-sm text-peach-400 mb-4">Teman sambat onlinemu. Siap mendengar kapan saja kamu butuh sandaran.</p>
+                <div class="flex justify-center md:justify-start gap-4 text-2xl">
+                    <a href="https://instagram.com/sdandelion306" target="_blank" class="hover:text-white transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            
+            <div class="bg-peach-800 p-5 rounded-xl max-w-md border border-peach-700/50">
+                <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i class="ph-fill ph-warning-circle text-amber-400"></i> Disclaimer Penting</h4>
+                <p class="text-xs text-peach-300 leading-relaxed">
+                    Layanan ini adalah pendengar teman sebaya (peer-listening) untuk keluh kesah sehari-hari. Kami <b>bukan</b> psikolog atau psikiater profesional. Jika Anda memiliki trauma berat, gangguan klinis, atau pemikiran melukai diri sendiri, kami sangat menyarankan untuk menghubungi bantuan profesional atau layanan darurat.
+                </p>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto mt-8 pt-8 border-t border-peach-800 text-center text-sm text-peach-500">
+            &copy; 2026 Dandelions. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Custom Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center modal-hidden bg-peach-900/60 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full shadow-2xl relative">
+            <button onclick="closeBooking()" class="absolute top-4 right-4 text-peach-400 hover:text-peach-900 bg-peach-50 hover:bg-peach-100 p-2 rounded-full transition">
+                <i class="ph-bold ph-x"></i>
+            </button>
+            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="ph-fill ph-whatsapp-logo"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-center mb-2">Lanjut ke WhatsApp?</h3>
+            <p class="text-center text-peach-900/70 text-sm mb-6">Kamu memilih paket: <br><strong id="paketName" class="text-peach-600 text-base mt-1 inline-block"></strong></p>
+            
+            <p class="text-xs text-center text-peach-500 mb-6 bg-peach-50 p-3 rounded-lg border border-peach-100">
+                Identitasmu tetap aman. Admin kami akan menyapa dengan ramah dan memandu sesi trial/pembayaranmu.
+            </p>
+
+            <button onclick="confirmBooking()" class="w-full bg-[#25D366] hover:bg-[#1ebd5a] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-green-500/30 transition flex items-center justify-center gap-2">
+                Chat Admin Sekarang <i class="ph-bold ph-paper-plane-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button onclick="openBooking('Tanya-tanya Dulu')" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl shadow-green-500/40 hover:scale-110 transition z-40 group">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-peach-900 text-sm font-bold py-2 px-4 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
+            Chat Admin
+        </span>
+    </button>
+
+    <!-- Interactive Scripts -->
+    <script>
+        const modal = document.getElementById('bookingModal');
+        const paketNameEl = document.getElementById('paketName');
+        let selectedPaket = '';
+
+        function openBooking(paket) {
+            selectedPaket = paket;
+            paketNameEl.innerText = paket;
+            modal.classList.remove('modal-hidden');
+            modal.classList.add('modal-visible');
+        }
+
+        function closeBooking() {
+            modal.classList.remove('modal-visible');
+            modal.classList.add('modal-hidden');
+        }
+
+        function confirmBooking() {
+            // Format pesan otomatis untuk WhatsApp
+            const greeting = "Halo Kak, aku nemu web Dandelions.";
+            let message = "";
+            
+            if (selectedPaket === 'Tanya-tanya Dulu') {
+                message = `${greeting} Aku mau tanya-tanya dulu dong tentang sesi curhatnya.`;
+            } else {
+                message = `${greeting} Aku mau klaim Trial Gratis 10 Menit dong, tertarik sama Paket *${selectedPaket}*.`;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            // Link WhatsApp dengan nomor yang sudah disesuaikan
+            const waLink = `https://wa.me/6287745112291?text=${encodedMessage}`;
+            
+            // Tutup modal dan buka tab baru WA
+            closeBooking();
+            window.open(waLink, '_blank');
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeBooking();
+            }
+        });
+    </script>
+</body>
+</html>
